@@ -54,7 +54,7 @@ class HangpersonGame attr_accessor :word, :guesses, :wrong_guesses
   def check_win_or_lose
     if wrong_guesses.length >= 7
       return :lose
-    elsif @guesses.length == @word.length
+    elsif word_with_guesses == @word
       return :win
     else
       return :play
